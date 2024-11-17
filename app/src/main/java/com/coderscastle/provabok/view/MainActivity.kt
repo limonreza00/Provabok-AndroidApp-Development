@@ -8,7 +8,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import com.coderscastle.provabok.navigation.ManageNavigation
 import com.coderscastle.provabok.ui.theme.ProvabokTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +26,7 @@ class MainActivity : ComponentActivity() {
                             .fillMaxSize()
                             .padding(innerPadding)
                     ){
-                        
+                        ManageNavigation()
                     }
 
                 }
@@ -31,3 +34,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun GreetingPreview() {
+
+    ManageNavigation()
+}
+
