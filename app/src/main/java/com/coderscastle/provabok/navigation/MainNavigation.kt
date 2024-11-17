@@ -9,6 +9,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.coderscastle.provabok.view.BottomBarComposable
+import com.coderscastle.provabok.view.HomeScreen
+import com.coderscastle.provabok.view.JobsScreen
+import com.coderscastle.provabok.view.NotificationScreen
+import com.coderscastle.provabok.view.PracticeScreen
 
 
 @Composable
@@ -37,17 +41,20 @@ fun ManageNavigation(){
 
                 composable(Screen.Home.route){
 
+                    HomeScreen(navController = navController)
+
                 }
 
 
 
                 composable(Screen.Jobs.route){
-
+                    JobsScreen(navController = navController)
                 }
 
 
                 composable(Screen.Practice.route){
 
+                    PracticeScreen(navController = navController)
                 }
 
 
@@ -57,6 +64,7 @@ fun ManageNavigation(){
 
 
                 composable(Screen.Notifications.route){
+                    NotificationScreen(navController = navController)
 
                 }
 
