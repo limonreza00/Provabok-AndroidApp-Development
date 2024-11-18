@@ -1,6 +1,5 @@
 package com.coderscastle.provabok.view
 
-import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -14,7 +13,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
@@ -22,8 +20,6 @@ import coil.compose.AsyncImage
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopAppBar(navController: NavHostController){
-
-    val context = LocalContext.current
 
     TopAppBar(
         title = {
@@ -38,7 +34,7 @@ fun TopAppBar(navController: NavHostController){
                 imageVector = Icons.Default.Menu,
                 contentDescription = "Menu",
                 modifier = Modifier
-                    .clickable(onClick = { Toast.makeText(context, "Menu Clicked", Toast.LENGTH_SHORT).show() }))
+                    .clickable(onClick = { }))
         },
         actions = {
             AsyncImage(
@@ -47,6 +43,7 @@ fun TopAppBar(navController: NavHostController){
                 modifier = Modifier
                     .size(40.dp)
                     .clip(CircleShape)
+                    .clickable(onClick = {navController.navigate("profile")})
 
             )
 

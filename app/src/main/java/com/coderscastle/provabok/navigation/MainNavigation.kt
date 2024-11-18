@@ -8,6 +8,7 @@ import com.coderscastle.provabok.view.HomeScreen
 import com.coderscastle.provabok.view.JobsScreen
 import com.coderscastle.provabok.view.NotificationScreen
 import com.coderscastle.provabok.view.PracticeScreen
+import com.coderscastle.provabok.view.ProfileScreen
 
 @Composable
 fun ManageNavigation(navController : NavHostController){
@@ -46,6 +47,9 @@ fun ManageNavigation(navController : NavHostController){
 
                 }
 
+                composable(Screen.Profile.route){
+                    ProfileScreen(navController = navController)
+                }
 
     }
 }
