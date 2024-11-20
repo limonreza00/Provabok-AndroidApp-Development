@@ -19,7 +19,7 @@ import coil.compose.AsyncImage
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopAppBar(navController: NavHostController){
+fun TopAppBar(navController: NavHostController , onMenuClick: () -> Unit){
 
     TopAppBar(
         title = {
@@ -34,7 +34,7 @@ fun TopAppBar(navController: NavHostController){
                 imageVector = Icons.Default.Menu,
                 contentDescription = "Menu",
                 modifier = Modifier
-                    .clickable(onClick = { }))
+                    .clickable(onClick = onMenuClick))
         },
         actions = {
             AsyncImage(

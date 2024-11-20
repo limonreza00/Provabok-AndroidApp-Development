@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.coderscastle.provabok.model.BottomNavItem
 import com.coderscastle.provabok.navigation.Screen
 
 @Composable
@@ -19,8 +20,8 @@ fun BottomBarComposable (navController: NavHostController){
     val navItems = listOf(
         BottomNavItem(
             title = "Home",
-            selectedIcon =R.drawable.home_filled,
-            unselectedIcon =R.drawable.home_outline,
+            selectedIcon = R.drawable.home_filled,
+            unselectedIcon = R.drawable.home_outline,
             hasNews = false,
             route = Screen.Home.route
         ),
@@ -34,7 +35,7 @@ fun BottomBarComposable (navController: NavHostController){
         BottomNavItem(
             title = "Practice",
             selectedIcon = R.drawable.baseline_library_books_24,
-            unselectedIcon =R.drawable.outline_library_books_24 ,
+            unselectedIcon = R.drawable.outline_library_books_24,
             hasNews = false,
             route = Screen.Practice.route
         ),
@@ -42,7 +43,7 @@ fun BottomBarComposable (navController: NavHostController){
         BottomNavItem(
             title = "Notification",
             selectedIcon = R.drawable.baseline_notifications_24,
-            unselectedIcon =R.drawable.outline_notifications_24 ,
+            unselectedIcon = R.drawable.outline_notifications_24,
             hasNews = false,
             route = Screen.Notifications.route
         )

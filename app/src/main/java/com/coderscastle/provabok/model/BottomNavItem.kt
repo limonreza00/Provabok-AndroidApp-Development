@@ -1,4 +1,4 @@
-package com.coderscastle.provabok.view
+package com.coderscastle.provabok.model
 
 data class BottomNavItem(
     val title: String,
