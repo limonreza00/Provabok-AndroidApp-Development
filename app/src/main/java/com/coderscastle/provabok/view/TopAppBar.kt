@@ -25,8 +25,6 @@ fun TopAppBar(navController: NavHostController , onMenuClick: () -> Unit){
         title = {
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color.Yellow,
-            titleContentColor = Color.Black
         ),
         modifier = Modifier,
         navigationIcon = {
