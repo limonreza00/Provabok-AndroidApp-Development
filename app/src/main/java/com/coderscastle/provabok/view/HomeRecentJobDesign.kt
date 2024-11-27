@@ -38,19 +38,22 @@ fun HomeRecentJobDesign() {
         items(10) { index -> // Display 10 items
             Card(
                 modifier = Modifier
+
                     .fillMaxWidth(),
                 elevation = CardDefaults.cardElevation(3.dp),
                 shape = RoundedCornerShape(8.dp),
             ) {
                 Row(
                     modifier = Modifier
+                        .background(color = Color(0x999DAE11))
                         .fillMaxSize(),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
 
                     Box(
                         modifier = Modifier
-                            .size(70.dp)
+                            .padding(5.dp)
+                            .size(50.dp)
                     ) { AsyncImageJobItem(imageUrl = "https://avatars.githubusercontent.com/u/14994036?v=4") }
 
                     Column (
@@ -58,10 +61,9 @@ fun HomeRecentJobDesign() {
                             .padding(10.dp)
                     ){
                         Text(text = "বাংলাদেশ চলচ্চিত্র ও টেলিভিশন ইনস্টিটিউট নিয়োগ",
-                            maxLines = 2)
+                            maxLines = 1)
                         Text(text = "পদ সংখ্যা : ২৬ টি")
-                        Text(text = "আবেদনের শেষ সময় : ১৫ নভেম্বর ২০২৪ তারিখ।")
-                        Text(text = "আবেদনের মাধ্যম: অনলাইনে।")
+                        Text(text = "শেষ সময় : ১৫ নভেম্বর ২০২৪ তারিখ।")
                     }
 
                 }
@@ -71,3 +73,8 @@ fun HomeRecentJobDesign() {
     }
 }
 
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun HomeScreenPreview(){
+   HomeRecentJobDesign()
+}

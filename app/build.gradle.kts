@@ -64,4 +64,10 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     implementation (libs.coil.compose)
+
+
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.cio) // For HTTP calls
+    implementation(libs.ktor.client.content.negotiation) // For JSON parsing
+    implementation(libs.ktor.serialization.kotlinx.json) // For Kotlin Serialization
 }

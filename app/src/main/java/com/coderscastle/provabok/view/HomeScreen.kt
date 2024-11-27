@@ -43,7 +43,7 @@ fun HomeScreen(navController: NavHostController) {
                    modifier = Modifier
                        .fillMaxWidth()
                        .padding(start = 15.dp, end = 15.dp, top = 16.dp)
-                       .height(150.dp)
+                       .height(120.dp)
                        .background(
                            shape = RoundedCornerShape(16.dp),
                            color = Color.LightGray
@@ -57,7 +57,7 @@ fun HomeScreen(navController: NavHostController) {
                Box(
                    modifier = Modifier
                        .fillMaxWidth()
-                       .height(130.dp)
+                       .height(150.dp)
                        .padding(start = 15.dp, end = 15.dp)
                ) {
                    Column {
@@ -112,9 +112,3 @@ fun HomeScreen(navController: NavHostController) {
 
 
 
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun HomeScreenPreview(){
-    HomeScreen(navController = NavHostController(LocalContext.current))
-
-}
